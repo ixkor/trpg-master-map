@@ -91,6 +91,9 @@ struct MapView: View {
                     
                     let x = Int((value.location.x - ox) / s / dx)
                     let y = Int((value.location.y - oy) / s / dy)
+                    if (x < 0 || y < 0 || x >= Int(appState.width) || y >= Int(appState.height)) {
+                        return
+                    }
                     let i = y * Int(appState.width) + x
                     appState.fog[i] = 0
                 }))
