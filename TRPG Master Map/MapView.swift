@@ -15,12 +15,12 @@ struct MapView: View {
     var useRotate: Bool = false
 
     var body: some View {
-        let image = appState.image!
+        let image = appState.image
         
         ZStack {
             Color.black
                 .ignoresSafeArea()
-            Image(nsImage: image)
+            Image(nsImage: image ?? NSImage.init())
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             GeometryReader { geometry in
@@ -35,7 +35,7 @@ struct MapView: View {
     }
 
     private func onPoint(_ location: CGPoint, _ size: CGSize) {
-        let map = appState.calcMap(size)
+        guard let map = appState.calcMap(size) else { return }
         let x = Int((location.x - map.ox) / map.dx)
         let y = Int((location.y - map.oy) / map.dy)
         if (x < 0 || y < 0 || x >= Int(appState.width) || y >= Int(appState.height)) {
@@ -46,7 +46,7 @@ struct MapView: View {
     }
 
     private func drawOverlay(_ context: inout GraphicsContext, _ size: CGSize) {
-        let map = appState.calcMap(size)
+        guard let map = appState.calcMap(size) else { return }
         for (i, v) in appState.fog.enumerated() {
             let x = CGFloat(i % Int(appState.width))
             let y = CGFloat(i / Int(appState.width))

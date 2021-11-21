@@ -20,6 +20,7 @@
 		D4A9ACC8273DB4EF00E5248D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D4A9ACCA27402B5200E5248D /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		D4A9ACCC27498F4900E5248D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D4A9ACCE274A845F00E5248D /* TRPG-Master-Map-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TRPG-Master-Map-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D4C84573273C5FC900D52A54 /* TRPG Master Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TRPG Master Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C84576273C5FC900D52A54 /* TRPG_Master_MapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRPG_Master_MapApp.swift; sourceTree = "<group>"; };
 		D4C84578273C5FC900D52A54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		D4C84575273C5FC900D52A54 /* TRPG Master Map */ = {
 			isa = PBXGroup;
 			children = (
+				D4A9ACCE274A845F00E5248D /* TRPG-Master-Map-Info.plist */,
 				D4A9ACC8273DB4EF00E5248D /* AppState.swift */,
 				D4C84578273C5FC900D52A54 /* ContentView.swift */,
 				D4A9ACCA27402B5200E5248D /* PlayersView.swift */,
@@ -282,16 +284,18 @@
 				CODE_SIGN_ENTITLEMENTS = "TRPG Master Map/TRPG_Master_Map.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"TRPG Master Map/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TRPG-Master-Map-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.xkor.TRPG-Master-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -307,16 +311,18 @@
 				CODE_SIGN_ENTITLEMENTS = "TRPG Master Map/TRPG_Master_Map.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"TRPG Master Map/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TRPG-Master-Map-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.xkor.TRPG-Master-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
