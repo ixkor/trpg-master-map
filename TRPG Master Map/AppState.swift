@@ -26,4 +26,22 @@ class AppState: ObservableObject {
     }
     
     @Published var insets: EdgeInsets = EdgeInsets()
+    
+    func calcMap(_ size: CGSize) -> MapParams {
+        let image = image!
+        let imageSize = image.size
+        let sx = size.width / imageSize.width
+        let sy = size.height / imageSize.height
+        let s = min(sx, sy)
+        return MapParams(
+            ox: (size.width - imageSize.width * s) / 2 + insets.leading,
+            oy: (size.height - imageSize.height * s) / 2 + insets.top,
+            dx: (imageSize.width - insets.trailing) / CGFloat(width) * s,
+            dy: (imageSize.height - insets.bottom) / CGFloat(height) * s
+        )
+    }
+    
+    struct MapParams {
+        let ox, oy, dx, dy: CGFloat
+    }
 }
